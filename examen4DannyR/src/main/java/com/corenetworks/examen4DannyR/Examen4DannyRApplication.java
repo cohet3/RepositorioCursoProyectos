@@ -17,22 +17,20 @@ public class Examen4DannyRApplication implements CommandLineRunner {
 	}
 	@Autowired
 	Factura f1;
-
 	@Override
 	public void run(String... args) throws Exception {
 		List<Producto> productos = new ArrayList<>();
 		productos.add(new Producto("lapiz", 22));
 		productos.add(new Producto("cuaderno", 32));
 		productos.add(new Producto("libro", 52));
-		IImpuesto general = new IvaGeneral();
-		IImpuesto reducido = new IvaSuperReducido();
 
-		f1.setImpuesto(general);
+
+
 		f1.setProductos(productos);
-		System.out.println("IVA general " + f1.calcularTotalFactura());
-		f1.setImpuesto(reducido);
-		System.out.println("IVA reducido " + f1.calcularTotalFactura());
+		System.out.println("IVA General " + f1.calcularTotalFactura()+" €");
 
+		/*System.out.println("IVA Reducido " + f1.calcularTotalFactura()+" €");
+*/
 
 	}
 }

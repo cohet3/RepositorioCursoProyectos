@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 
-/*@Table(name="productos")*/
+
 public class Producto {
     private String nombre;
     private double precio;
